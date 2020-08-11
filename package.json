@@ -1,7 +1,7 @@
 {
-  "name": "Passport",
+  "name": "OAuth",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js"
@@ -11,5 +11,8 @@
     "express": "^4.17.1",
     "express-handlebars": "3.1.0",
     "nodemon": "^1.19.4"
-  }
+  },
+  "description": "Oauth and Passport excercise",
+  "repository": "git@github.com:wnwarchdev/OAuth_practice.git",
+  "author": "Wojtek Nowak <billnewmann@gmail.com>"
 }
