@@ -109,6 +109,26 @@ button {
   animation-duration: 1s;
 }
 
+.placeholder {
+  background: #fff;
+  color: #000;
+  border-left: 4px solid #111;
+  padding: 0.9rem 0.8rem;
+  margin: 1rem auto 1.5rem auto;
+  display: flex;
+  opacity: 1;
+  font-weight: lighter;
+  box-shadow: 0 0 0 rgba(0,0,0,0.2);
+  max-width: 15rem;
+  border-radius: 4px;
+  background: #e98f3a;
+  color: rgb(66, 66, 66);
+  border-color:#fff126;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
 .loginBtn {
   display: block;
   width: 250px;
