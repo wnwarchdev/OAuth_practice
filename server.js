@@ -11,7 +11,7 @@ const app = express();
 passport.use(new GoogleStrategy({
   clientID: '265373913151-v4bbr67cjjn96u7t5jbu2ns5rq8j649d.apps.googleusercontent.com',
   clientSecret: 'HbI5j4JjHcQ_xvGMz8uZEHx4',
-  callbackURL: 'http://localhost:8000/auth/callback'
+  callbackURL: 'http://localhost:8000/auth/google/callback'
   }, (accessToken, refreshToken, profile, done) => {
     done(null, profile);
   }));
@@ -48,6 +48,16 @@ app.get('/user/no-permission', (req, res) => {
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['email', 'profile'] }));
+
+app.get('/auth/google/callback', (req, res) => {
+  res.send(`I'm back from Google!`);
+});
+
+app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/user/no-permission' }),
+  (req, res) => {
+    res.redirect('/user/logged');
+  }
+);
 
 app.use('/', (req, res) => {
   res.status(404).render('notFound');
