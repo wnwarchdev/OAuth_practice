@@ -26,5 +26,10 @@ router.get('/profile', (req, res) => {
     else{res.render('noPermission')};
   });
 
+  router.get('/auth.logout', (req, res) => {
+    res.render('logOff')
+    req.logout();
+    });
+
 
 module.exports = router;
